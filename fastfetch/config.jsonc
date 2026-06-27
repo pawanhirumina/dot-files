@@ -1,0 +1,112 @@
+
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        // Change this to any built-in Fastfetch logo.
+        // Examples: "macos", "fedora", "windows", "arch", "nixos"
+        // You can also use a custom image or ASCII art file path.
+        "source": "macos",
+        // Available types:
+        // auto  = use a built-in Fastfetch logo
+        // chafa = display an image
+        // file  = display ASCII art from a text file
+        "type": "auto",
+        "width": 5,
+        "padding": {
+            "left": 0,
+            "top": 2,
+            "bottom": 3
+        }
+    },
+    "display": {
+        // Examples: " : ", " > ", " => "
+        "separator": " > "
+    },
+    "modules": [
+        // Add breaks to align the information panel with the logo.
+        "break",
+        "break",
+        "break",
+        "break",
+        "break",
+        {
+            "type": "custom",
+            "key": " User ",
+            "keyColor": "red",
+            "format": "Replace with your name"
+        },
+        {
+            "type": "os",
+            "key": " OS ",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "kernel",
+            "key": " Kernel ",
+            "keyColor": "green"
+        },
+        {
+            "type": "uptime",
+            "key": "󰅐 Uptime ",
+            "keyColor": "cyan"
+        },
+        {
+            "type": "packages",
+            "key": "󰏖 Packages ",
+            "keyColor": "blue"
+        },
+        {
+            "type": "shell",
+            "key": " Shell ",
+            "keyColor": "magenta"
+        },
+        {
+            "type": "terminal",
+            "key": " Terminal ",
+            "keyColor": "bright_red"
+        },
+        {
+            "type": "cpu",
+            "key": " CPU ",
+            "keyColor": "bright_yellow"
+            // Uncomment and edit if your CPU name is too long:
+            // "format": "Intel Core i3"
+        },
+        {
+            "type": "gpu",
+            "key": "󰢮 GPU ",
+            "keyColor": "bright_green"
+            // Uncomment and edit if your GPU name is too long:
+            // "format": "Intel Integrated Graphics"
+        },
+        {
+            "type": "wm",
+            "key": " Window Manager ",
+            "keyColor": "bright_cyan"
+        },
+        {
+            "type": "de",
+            "key": " Desktop Environment ",
+            "keyColor": "bright_blue"
+        },
+        {
+            "type": "memory",
+            "key": " Memory ",
+            "keyColor": "bright_magenta"
+        },
+        // Remove this module if you don't want to display your local IP.
+        {
+            "type": "localip",
+            "key": "󰛳 Local IP ",
+            "keyColor": "red",
+            "timeout": 2000
+        },
+        "break",
+        {
+            "type": "colors",
+            "symbol": "block",
+            "paddingLeft": 10
+        }
+    ]
+}
+
